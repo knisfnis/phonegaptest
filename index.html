@@ -2,6 +2,9 @@
 <head>
 	<title>Hei verd</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+	<link href="http://code.google.com/apis/maps/documentation/javascript/examples/default.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="googlemap.js"></script>
 </head>
 
 <body>
@@ -9,12 +12,18 @@
 	<p>Halla. <a href="divinfo.html">Link til div info.</a></p>
 	<p id="jsFyllerMedTekst"></p>
 	<img src="images/icon.png" />
+	<div id="map_canvas"></div>
 	
 	
 	<script>
 		window.onload = function() {
 			document.getElementById("jsFyllerMedTekst").innerHTML = "TESTER FYLLE MED TEKST";
 		}
+		function onDeviceReady(){
+   			 var map = new GoogleMap();
+    			map.initialize();
+    	}
+}
 	</script>
 </body>
 </html>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns	= "http://www.w3.org/ns/widgets"
+	xmlns:gap	= "http://phonegap.com/ns/1.0"
+	version 	= "1.0">
+
+	<name>PLZ FINN MEG/name>
+
+	<description>Denne appen er awesome.
+	</description>
+
+	<author>
+		Sarah m.fl.
+	</author>
+	<access origin="*.google.com" />
+	<access origin="*.googleapis.com" />
+	<access origin="*.gstatic.com" />
+	
+
+
+
+
+</widget>
