@@ -3,13 +3,13 @@
 	xmlns:gap	= "http://phonegap.com/ns/1.0"
 	version 	= "1.0">
 
-	<name>PLZ FINN MEG/name>
+	<name>hei/name>
 
-	<description>Denne app er awesome.
+	<description>hei
 	</description>
 
 	<author>
-		Sarah m.fl.
+		sarah
 	</author>
 	
 	<access origin="http://*.google.com" />
