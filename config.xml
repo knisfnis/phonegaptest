@@ -5,17 +5,14 @@
 
 	<name>PLZ FINN MEG/name>
 
-	<description>Denne app er awesome.</description>
+	<description>Denne app er awesome.
+	</description>
 
 	<author>
 		Sarah m.fl.
 	</author>
+	
 	<access origin="http://google.com" />
 	<access origin="http://googleapis.com" />
 	<access origin="http://gstatic.com" />
-	
-
-
-
-
 </widget>
