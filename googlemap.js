@@ -3,7 +3,6 @@ function GoogleMap(){
 this.initialize = function(){
 var map = showMap();
 addMarkersToMap(map);
-
 }
  
  var showMap = function(){
