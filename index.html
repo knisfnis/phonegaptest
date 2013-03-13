@@ -5,6 +5,8 @@
 	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
 	<link href="http://code.google.com/apis/maps/documentation/javascript/examples/default.css" rel="stylesheet" type="text/css" />
 	<script type="text/javascript" src="googlemap.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
 </head>
 
 <body>
@@ -21,6 +23,37 @@
 			var map = new GoogleMap();
     		map.initialize();
 		}
+
+
+// 	this.addLocation = function(event) {
+//       event.preventDefault();
+//       console.log('addLocation');
+//       navigator.geolocation.getCurrentPosition(
+//           function(position) {
+//               $('.location', this.el).html(position.coords.latitude + ',' + position.coords.longitude);
+//           },
+//           function() {
+//               alert('Error getting location');
+//           });
+//       return false;
+//   };
+  
+  var addMarkersToMap = function(map){
+	var latitudeAndLongitudeOne = new google.maps.LatLng('-33.890542','151.274856');
+ 
+	var markerOne = new google.maps.Marker({
+	position: latitudeAndLongitudeOne,
+	map: map
+	});
+ 
+	var latitudeAndLongitudeTwo = new google.maps.LatLng('57.77828', '14.17200');
+ 
+	var markerOne = new google.maps.Marker({
+	position: latitudeAndLongitudeTwo,
+	map: map
+	});
+}
+	
 
 	</script>
 </body>
