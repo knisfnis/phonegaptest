@@ -10,7 +10,7 @@
 <body>
 	<h1>HEI, VERD.</h1>
 	<p>Halla. <a href="divinfo.html">Link til div info.</a></p>
-	<p id="jsFyllerMedTekst"></p>
+	<p id="jsFyllerMedTekst">NEI</p>
 	<img src="images/icon.png" />
 	<div id="map_canvas"></div>
 	
@@ -18,12 +18,10 @@
 	<script>
 		window.onload = function() {
 			document.getElementById("jsFyllerMedTekst").innerHTML = "TESTER FYLLE MED TEKST";
+			var map = new GoogleMap();
+    		map.initialize();
 		}
-		function onDeviceReady(){
-   			 var map = new GoogleMap();
-    			map.initialize();
-    	}
-}
+
 	</script>
 </body>
 </html>
