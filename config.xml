@@ -11,9 +11,9 @@
 	<author>
 		Sarah m.fl.
 	</author>
-	<access origin="*.google.com" />
-	<access origin="*.googleapis.com" />
-	<access origin="*.gstatic.com" />
+	<access origin="http://google.com" />
+	<access origin="http://googleapis.com" />
+	<access origin="http://gstatic.com" />
 	
 
 
