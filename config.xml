@@ -12,9 +12,7 @@
 		sarah
 	</author>
 	
-	<access origin="http://*.google.com" />
-	<access origin="http://*.googleapis.com" />
-	<access origin="http://*.gstatic.com" />
+
 
 	
 </widget>
