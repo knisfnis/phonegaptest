@@ -1,7 +1,9 @@
+var globalMap;
+
 function GoogleMap(){
  
 this.initialize = function(){
-var map = showMap();
+globalMap = showMap();
 addMarkersToMap(map, '59.91737', '10.71394');
 }
  

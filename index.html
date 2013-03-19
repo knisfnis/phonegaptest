@@ -13,7 +13,9 @@
 	<h1>HEI, VERD.</h1>
 	<p>Halla. <a href="divinfo.html">Link til div info.</a></p>
 	<p id="jsFyllerMedTekst">NEI</p>
-	<img src="images/icon.png" />
+	Latitude: <input type="text" id="lat" \> <br />
+	Longitude: <input type="text" id="lng" \>
+	<button onclick="addTheseCoordinatesToMap();">Legg til kart</button>
 	<div id="map_canvas"></div>
 	
 	
@@ -21,8 +23,17 @@
 		window.onload = function() {
 			document.getElementById("jsFyllerMedTekst").innerHTML = "EG E OPPDATERT IGJEN";
 			var map = new GoogleMap();
-    		map.initialize();
+			map.initialize();
 		}
+		
+		function addTheseCoordinatesToMap() {
+			var map = globalMap;
+			var lat = document.getElementById("lat").value;
+			var lng = document.getElementById("lng").value;
+			document.getElementById("jsFyllerMedTekst").innerHTML = "Lat: " + lat + "   Lng: " + lng;
+			addMarkersToMap(map, lat, lng);
+		}
+		
   
 	
 
