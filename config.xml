@@ -16,11 +16,9 @@
 	<access origin="http://*.googleapis.com" />
 	<access origin="http://*.gstatic.com" />
 	
-	<plugin name="Geolocation" value="org.apache.cordova.GeoBroker" />
-
-<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+	<rim:permissions>
+    <rim:permit>read_geolocation</rim:permit>
+</rim:permissions>
 
 	
 </widget>
