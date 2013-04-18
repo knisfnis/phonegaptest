@@ -45,7 +45,7 @@
 					document.getElementById("jsFyllerMedTekst").innerHTML = "Lat: " + lat + "   Lng: " + lng;
 				}, function(error){
 					document.getElementById("jsFyllerMedTekst").innerHTML = "Failed to get GPS location";
-				});
+				},{timeout:10000});
 			} else {
 				document.getElementById("jsFyllerMedTekst").innerHTML = "Failed to get GPS working";
 			}
