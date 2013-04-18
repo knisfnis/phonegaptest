@@ -44,7 +44,7 @@
 				}, function(error){
 					document.getElementById("jsFyllerMedTekst").innerHTML = "Failed to get GPS location";
 					alert(error.message);
-				},{timeout:10000});
+				},{enableHighAccuracy: true}, {timeout:10000});
 			} else {
 				document.getElementById("jsFyllerMedTekst").innerHTML = "Failed to get GPS working";
 			}
