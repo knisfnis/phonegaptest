@@ -38,9 +38,14 @@
 		function addMyCoordinatesToMap() {
 			if(navigator.geolocation) {
 				navigator.geolocation.getCurrentPosition(function(p) {
-					var lat = 'Latitude '+p.coords.latitude;
-					var lng = 'Longitude '+p.coords.longitude;
-					document.getElementById("jsFyllerMedTekst").innerHTML = "Lat: " + lat + "   Lng: " + lng;
+					var lat = 'Latitude: '+p.coords.latitude;
+					var lng = 'Longitude: '+p.coords.longitude;
+					document.getElementById("jsFyllerMedTekst").innerHTML = "" + lat + lng;
+					var map = globalMap;
+					addMarkersToMap(map, p.coords.latitude, p.coords.longitude);
+
+
+					
 				}, function(error){
 					document.getElementById("jsFyllerMedTekst").innerHTML = "Failed to get GPS location";
 					alert(error.message);
