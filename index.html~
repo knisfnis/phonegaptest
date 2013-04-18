@@ -13,7 +13,10 @@
 	<h1>HEI, VERD.</h1>
 	<p>Halla. <a href="divinfo.html">Link til div info.</a></p>
 	<p id="jsFyllerMedTekst">NEI</p>
-	<img src="images/icon.png" />
+	Latitude: <input type="text" id="lat" \> <br />
+	Longitude: <input type="text" id="lng" \>
+	<button onclick="addTheseCoordinatesToMap();">Legg til kart</button>
+	<button onclick="addMyCoordinatesToMap();">Legg meg til kart</button>
 	<div id="map_canvas"></div>
 	
 	
@@ -21,22 +24,30 @@
 		window.onload = function() {
 			document.getElementById("jsFyllerMedTekst").innerHTML = "EG E OPPDATERT IGJEN";
 			var map = new GoogleMap();
-    		map.initialize();
+			map.initialize();
 		}
-
-
-// 	this.addLocation = function(event) {
-//       event.preventDefault();
-//       console.log('addLocation');
-//       navigator.geolocation.getCurrentPosition(
-//           function(position) {
-//               $('.location', this.el).html(position.coords.latitude + ',' + position.coords.longitude);
-//           },
-//           function() {
-//               alert('Error getting location');
-//           });
-//       return false;
-//   };
+		
+		function addTheseCoordinatesToMap() {
+			var map = globalMap;
+			var lat = document.getElementById("lat").value;
+			var lng = document.getElementById("lng").value;
+			addMarkersToMap(map, lat, lng);
+		}
+		
+		function addMyCoordinatesToMap() {
+			if(navigator.geolocation) {
+				navigator.geolocation.getCurrentPosition(function(p) {
+					var lat = 'Latitude '+p.coords.latitude;
+					var lng = 'Longitude '+p.coords.longitude;
+					document.getElementById("jsFyllerMedTekst").innerHTML = "Lat: " + lat + "   Lng: " + lng;
+				}, function(error){
+					document.getElementById("jsFyllerMedTekst").innerHTML = "Failed to get GPS location";
+				});
+			} else {
+				document.getElementById("jsFyllerMedTekst").innerHTML = "Failed to get GPS working";
+			}
+		}
+		
   
 	
 

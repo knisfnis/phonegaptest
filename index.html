@@ -13,6 +13,7 @@
 	<h1>HEI, VERD.</h1>
 	<p>Halla. <a href="divinfo.html">Link til div info.</a></p>
 	<p id="jsFyllerMedTekst">NEI</p>
+	<p id="geofail">NEI</p>
 	Latitude: <input type="text" id="lat" \> <br />
 	Longitude: <input type="text" id="lng" \>
 	<button onclick="addTheseCoordinatesToMap();">Legg til kart</button>
@@ -37,6 +38,7 @@
 		function addMyCoordinatesToMap() {
 			if(navigator.geolocation) {
 				navigator.geolocation.getCurrentPosition(function(p) {
+					document.getElementById("geofail").innerHTML = "pripp";
 					var lat = 'Latitude '+p.coords.latitude;
 					var lng = 'Longitude '+p.coords.longitude;
 					document.getElementById("jsFyllerMedTekst").innerHTML = "Lat: " + lat + "   Lng: " + lng;
